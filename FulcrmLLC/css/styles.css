@@ -1,4 +1,61 @@
-﻿/* Basic style resets */
+﻿
+/* Basic style resets */
+body, ul, li, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background-color: #b8e0e6; /* Ice Blue */
+    color: #333; /* Dark Gray for Text */
+}
+
+h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 36px;
+}
+
+h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 30px;
+}
+
+h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 24px;
+}
+
+h4 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+}
+
+h5 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+}
+
+h6 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+}
+
+nav a {
+    font-size: 18px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 100%;
+}
+
 body, ul, li, h1, p {
     margin: 0;
     padding: 0;
@@ -7,7 +64,9 @@ body, ul, li, h1, p {
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #b8e0e6; /* Ice Blue */
+    color: #333; /* Dark Gray for Text */
 }
+
 
 .container {
     display: grid;
@@ -53,9 +112,17 @@ aside {
         border-radius: 3px;
     }
 
+.product-image {
+    max-width: 60%;
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .hero {
     background: url('img/me.jpg') no-repeat center center;
     background-color: #40e0d0; /* Turquoise */
+    background-size: cover; /* Added this to ensure the background image covers the div */
     color: #b8e0e6; /* Ice Blue */
     padding: 100px 0;
     text-align: center;
@@ -65,6 +132,10 @@ aside {
 @media (max-width: 768px) {
     .container {
         grid-template-columns: 1fr;
+    }
+
+    .product-image {
+        max-width: 90%;
     }
 }
 
@@ -124,6 +195,22 @@ footer {
     padding: 10px 0;
     text-align: center;
 }
+
 body.about .container {
     grid-template-columns: 1fr;
+}
+.image-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.product-image {
+    width: 30%; /* Dividing equally among 3 images */
+    margin: 0 1%; /* A little margin between them */
+    box-sizing: border-box; /* Ensures that padding or borders won't make the images wider than specified */
+}
+
+body.index-page, body.index-page h1, body.index-page p, body.index-page a {
+    color: #333 !important;
 }
